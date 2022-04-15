@@ -33,10 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         val restaurants = mutableListOf<YelpRestaurant>()
         val adapter = RestaurantsAdapter(this, restaurants)
-
         rvRestaurants.adapter = adapter
         rvRestaurants.layoutManager = LinearLayoutManager(this)
-
 
         // Define an end point for APi
         val yelpService = retrofit.create(YelpService::class.java)
@@ -61,6 +59,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
             })
+
+
 
 
 
